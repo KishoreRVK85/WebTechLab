@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Binary Search Tecgnique
+</title>
+<style>
+*
+{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+#container
+{
+display:flex;
+align-items:center;
+flex-direction:column;
+padding:10px;
+}
+h1
+{
+text-align:center-top;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<h1>Implementation of Binary Search Technique</h1>
+<h3 id="array"></h3>
+<h3 id="output"></h3>
+</div>
+</body>
+<script>
+let output=document.getElementById("output");
+let array=document.getElementById("array");
+function binarySearch(arr, l, r, x){
+    if (r >= l) {
+        let mid = l + Math.floor((r - l) / 2);
+        // If the element is present at the middle
+        // itself
+        if (arr[mid] == x)
+            return mid;
+  
+        // If element is smaller than mid, then
+        // it can only be present in left subarray
+        if (arr[mid] > x)
+            return binarySearch(arr, l, mid - 1, x);
+  
+        // Else the element can only be present
+        // in right subarray
+        return binarySearch(arr, mid + 1, r, x);
+    }
+  
+    // We reach here when element is not
+    // present in array
+    return -1;
+}
+// Elements in the array are the list of elements to search within
+let arr = [ 12, 14, 17, 25, 36, 49,72];
+document.write("Total number of elements in the array are : "+arr.length);
+document.write(" ; The Following are the elements : ");
+for(let t=0;t<arr.length;t++)
+{
+document.write("array["+(t)+"]" + ":" + arr[t] + " ");
+}
+//Change the required element in the place of X
+let x = 72;
+array.innerText=`You have searched for ${x}`;
+let n = arr.length;
+let result = binarySearch(arr, 0, n-1, x);
+if(result==-1)
+{
+output.innerText="The required element is not present in the list";
+} 
+else
+{
+output.innerText=`The required element is present in the list at index : ${result}`;
+}
+</script>
+</html>

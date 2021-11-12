@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<students>
+<stu1>
+<name>KISHORE</name>
+<regd.no>15</regd.no>
+<city>VIJAYAWADA</city>
+</stu1>
+<stu2>
+<name>ASHISH REDDY</name>
+<regd.no>14</regd.no>
+<city>ONGOLE</city>
+</stu2>
+<stu3>
+<name>TEJA SRINIVAS</name>
+<regd.no>16</regd.no>
+<city>GUNTUR</city>
+</stu3>
+</students>

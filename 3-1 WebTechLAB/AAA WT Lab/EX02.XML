@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE student [
+<!ELEMENT student (students-info*)>
+<!ELEMENT students-info (name,rollno,address)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name gender CDATA 'Male'>
+<!ATTLIST name gender (M|F) "M">
+<!ELEMENT rollno (#PCDATA)>
+<!ELEMENT address (city,contactno)>
+<!ELEMENT city (#PCDATA)>
+<!ATTLIST city pin CDATA #IMPLIED>
+<!ELEMENT contactno (#PCDATA)>
+]>
+<student>
+<students-info>
+<name gender='M'> KISHORE </name>
+<rollno> 15 </rollno>
+<address>
+<city pin="521190">svm</city>
+<contactno>7095942648</contactno>
+</address>
+</students-info>
+<students-info>
+<name gender='F'> TEZ </name>
+<rollno> 16 </rollno>
+<address>
+<city pin="522019">gnt</city>
+<contactno>9390804732</contactno>
+</address>
+</students-info>
+</student>

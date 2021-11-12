@@ -1,0 +1,41 @@
+<html>
+<head>
+<script language="JAVASCRIPT" type="TEXT/JAVASCRIPT">
+function validate()
+{
+event.returnvalue=false;
+if(document.f1.t1.value=="")
+window.alert("Enter the username");
+else if(document.f1.p1.value.length<8)
+window.alert("The password should be minimum 8 characters");
+else
+window.alert("You logged in successfully");
+}
+
+function Clear()
+{
+ v=window.confirm("Do you want to clear the data");
+if(v)
+ {
+   document.f1.t1.value=" ";
+   document.f1.p1.value="";
+ }
+}
+</script>
+<form name="f1" onsubmit="validate()">
+<table>
+<tr>
+	<td>Username :</td>
+	<td><input type="text" name="t1" size="20" /></td>
+</tr>
+<tr>
+	<td>Password :</td>
+	<td><input type="password" name="p1" size="20" /></td>
+</tr>
+<tr>
+	<td><input type="submit" value="Submit" /></td>
+	<td><input type="button" value="Clear" onclick="Clear()" /></td></tr>
+
+</table>
+</form>
+</html>

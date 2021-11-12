@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+<title>
+Bubble Sorting Technique
+</title>
+<style>
+h1{
+text-align:center;
+}
+</style>
+</head>
+<body>
+<h1>Bubble Sroting Technique</h1>
+</body>
+<script>
+let arr=[111,109,102,557,797,336];
+let len=arr.length;
+let i,j;
+const bubble_sort = (arr) =>
+{
+for(i=0;i<len;i++){
+for(j=0;j<=(len-i);j++){
+if(arr[j]>arr[j+1]){
+let temp=arr[j];
+arr[j]=arr[j+1];
+arr[j+1]=temp;
+}
+}
+}
+document.write(arr);
+}
+bubble_sort(arr);
+</script>
+</html>

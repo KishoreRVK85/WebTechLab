@@ -1,0 +1,54 @@
+<html>
+<head>
+<script>
+var m1,n1,m2,n2;
+m1=parseInt(window.prompt("enter no of rows of first matrix","m1"));
+n1=parseInt(window.prompt("enter no of colomns of first matrix","n1"));
+m2=parseInt(window.prompt("enter no of rows of second matrix","m2"));
+n2=parseInt(window.prompt("enter no of colomns of second matrix","n2"));
+if(n1!=m2)
+window.alert("Two matrices r not compatable for multiplication");
+else
+{
+a=new Array(m1);
+for(var i=0;i<a.length;i++)
+a[i]=new Array(n1);
+b=new Array(m2);
+for(var i=0;i<b.length;i++)
+b[i]=new Array(n2);
+c=new Array(m1);
+for(var i=0;i<b.length;i++)
+c[i]=new Array(n2);
+read(a);
+read(b);
+for(i=0;i<m1;i++)
+for(j=0;j<n2;j++)
+{
+c[i][j]=0;
+for(k=0;k<n1;k++)
+c[i][j]+=a[i][k]*b[k][j];
+}
+display("first matrix",a);
+display("second matrix",b);
+display("result matrix",c);
+}
+function read(x)
+{
+for(i=0;i<x.length;i++)
+for(j=0;j<x[i].length;j++)
+{
+x[i][j]=parseInt(window.prompt("enter["+i+1+","+j+1+"]element","0"));
+}
+}
+function display(str,y)
+{
+document.write("<h2>"+str+"</h2>");
+for(i=0;i<y.length;i++)
+{
+for(j=0;j<y[i].length;j++)
+document.write(y[i][j]+" ");
+document.writeln("<br/>");
+}
+}
+</script>
+</html

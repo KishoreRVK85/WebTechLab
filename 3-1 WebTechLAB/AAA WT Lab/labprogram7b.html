@@ -1,0 +1,18 @@
+<html>
+<head>
+<script>
+functionmovetext()
+{
+var v=document.f.t.value;
+para.innerText=v;
+para.style.left=event.offsetX;
+para.style.top=event.offsetY;
+}
+</script>
+</head>
+<body onmousemove="movetext()"></body>
+<form name="f">
+enter text<input type="text" id="t">
+<p id="para" style="position:relative"></p>
+</form>
+</html>

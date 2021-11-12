@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="labprogram14b.xsl"?>
+<stu_info>
+<stu Gender="m">
+<name>abc</name>
+<rollno>101</rollno>
+<city>gnt</city>
+</stu>
+<stu Gender="f">
+<name>xyz</name>
+<rollno>102</rollno>
+<city>hyd</city>
+</stu>
+</stu_info>
+

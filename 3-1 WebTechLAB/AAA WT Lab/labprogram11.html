@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function display()
+{
+var list=document.links;
+varlen=list.length;
+varlinkarr=new Array(len);
+for(i=0;i<len;i++)
+linkarr[i]=list[i].href;
+document.writeln("<table border='3'>");
+for(i=0;i<len;i++)
+document.writeln("<tr><td>"+linkarr[i]+"</td></tr>");
+document.writeln("</table>");
+}
+</script>
+</head>
+<body onload="display()">
+<a href="www.gmail.com">gmail</a>
+<a href="www.w3schools.com">w3</a>
+<a href="www.yahoo.com">yahoo</a>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xs:schemaxmlns="http://www.w3.org/2001/XMLSchema">
+<xs:element name="student">
+<xs:complex Type>
+<xs:sequence>
+<xs:element name="sname" type="xs:string">
+<xs:element name="address" type="xs:string">
+<xs:element name="marks" type="xs:integer">
+</xs:sequence>
+</xs:complex Type>
+</xs:element>
+</xs:schema>

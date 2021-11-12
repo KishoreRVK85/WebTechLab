@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+<title>
+Finding power of two numbers
+</title>
+</head>
+<body>
+<h1>Finding the power of two integers </h1>
+<h1>m,n are two integers m<sup>n</sup></h1>
+<input id="first" type="number" placeholder="Enter value of m">
+<input id="second" type="number" placeholder="Enter value of n">
+<button onclick="power()">Eval</button>
+<h1>Result is : <span id="res"></span></h1>
+</body>
+<script>
+const power = () =>
+{
+let res=document.getElementById("res");
+let first_number=document.getElementById("first");
+let second_number=document.getElementById("second");
+let m=first_number.value;
+let n=second_number.value;
+let result=Math.pow(m,n);
+res.innerText=result;
+}
+</script>
+</html>

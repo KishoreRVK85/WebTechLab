@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock</title>
+<style>
+h1
+{
+text-align:center;
+}
+h1:nth-child(1)
+{
+color:red;
+}
+h1:nth-child(2)
+{
+border:2px solid red;
+background-color:teal;
+font-size: 5.5em;
+}
+</style>
+</head>
+<body>
+<h1>Digital Clock</h1>
+<h1><span id="hours"></span><span id="minutes"></span><span id="seconds"></span><span id="meridian"></span></h1>
+</body>
+<script>
+const showTime = () => {
+let hours=document.getElementById("hours");
+let minutes=document.getElementById("minutes");
+let seconds=document.getElementById("seconds");
+let meridian=document.getElementById("meridian");
+var time=new Date();
+let hr = time.getHours();
+let min=time.getMinutes();
+let sec=time.getSeconds();
+if(hr<10){
+hr=`0${hr}`;
+}
+if(hr>12)
+{
+hr=hr-12;
+}
+if(min<10){
+min=`0${min}`;
+}
+if(sec<10){
+sec=`0${sec}`;
+}
+if(hr<12){
+meridian.innerText=` AM`;
+}
+if(hr>=12){
+meridian.innerText=` PM`;
+}
+hours.innerText=hr;
+minutes.innerText=`:${min}`;
+seconds.innerText=`:${sec}`;
+}
+setInterval(showTime,1000);
+</script>
+</html>

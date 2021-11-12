@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE greetings SYSTEM "Hello1.dtd">
+<greetings>
+<h>hello world</h>
+</greetings>

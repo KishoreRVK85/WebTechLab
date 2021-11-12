@@ -1,0 +1,86 @@
+<html>
+	 <head> <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>PROGRAM-3<script language="JAVASCRIPT" type="TEXT/JAVASCRIPT">
+var n=parseInt(window.prompt("Enter a number:",0000));
+document.writeln("The given number is "+n+"<br><br>");
+var a=new Array(4);
+i=0;
+while(n>0)
+{
+a[i++]=parseInt(parseInt(n%10)+7)%10;
+n/=10;
+}
+b=a[0];
+a[0]=a[2];
+a[2]=b;
+b=a[1];
+a[1]=a[3];
+a[3]=b;
+sum=0;
+for(var i=3;i>=0;i--)
+sum=sum*10+a[i];
+document.writeln("The encrypted number is ");
+if(a[3]==0)
+document.writeln("0");
+document.writeln(sum);
+for(i=0;i<4;i++)
+a[i]=parseInt((a[i]+3)%10);
+b=a[0];
+a[0]=a[2];
+a[2]=b;
+b=a[1];
+a[1]=a[3];
+a[3]=b;
+sum=0;
+for(var i=3;i>=0;i--)
+sum=sum*10+a[i];
+document.writeln("<br><br>The decrypted number is "+sum);
+</script>
+</title>
+     </head>
+     <body>
+         <script language="JAVASCRIPT" type="TEXT/JAVASCRIPT">
+var n=parseInt(window.prompt("Enter a number:",0000));
+document.writeln("The given number is "+n+"<br><br>");
+var a=new Array(4);
+i=0;
+while(n>0)
+{
+a[i++]=parseInt(parseInt(n%10)+7)%10;
+n/=10;
+}
+b=a[0];
+a[0]=a[2];
+a[2]=b;
+b=a[1];
+a[1]=a[3];
+a[3]=b;
+sum=0;
+for(var i=3;i>=0;i--)
+sum=sum*10+a[i];
+document.writeln("The encrypted number is ");
+if(a[3]==0)
+document.writeln("0");
+document.writeln(sum);
+for(i=0;i<4;i++)
+a[i]=parseInt((a[i]+3)%10);
+b=a[0];
+a[0]=a[2];
+a[2]=b;
+b=a[1];
+a[1]=a[3];
+a[3]=b;
+sum=0;
+for(var i=3;i>=0;i--)
+sum=sum*10+a[i];
+document.writeln("<br><br>The decrypted number is "+sum);
+</script>
+     </body>
+     <html>
+		<title>PROGRAM-3</title>  
+</html> 

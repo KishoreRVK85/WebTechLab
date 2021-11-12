@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>
+</title>
+<body>
+<form name="f1">
+<textarea id="t1" rows="20" cols="35">
+</textarea>
+<input type="button" value="click me" onclick="generate()">
+</form>
+</body>
+<script>
+function generate()
+{
+var A=new Array("the","a","one","some");
+var N=new Array("boy","girl","dog","town","car");
+var V=new Array("drove","jumped","ran","walked","skipped");
+var P=new Array("to","from","over","under","on");
+var sent="";
+var total="";
+for(i=0;i<20;i++)
+{
+var w1=new String(A[Math.round(Math.random()*4)]);
+var w2=new String(N[Math.round(Math.random()*4)]);
+var w3=new String(V[Math.round(Math.random()*4)]);
+var w4=new String(P[Math.round(Math.random()*4)]);
+var w5=new String(A[Math.round(Math.random()*4)]);
+var w6=new String(N[Math.round(Math.random()*4)]);
+var l1=w1.substr(0,1)
+var l2=w1.substr(1,3);
+w1=l1.toUpperCase(l1)+l2
+sent=w1+" "+w2+" "+w3+" "+w4+" "+w5+" "+w6+"."+"\n";
+total=total+sent;
+}
+document.f1.t1.value=total;
+}
+</script>
+</html>

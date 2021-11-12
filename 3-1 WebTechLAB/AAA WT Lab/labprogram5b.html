@@ -1,0 +1,38 @@
+<script>
+var n;
+
+
+var n;
+n=parseInt(window.prompt("Enter a number"));
+document.writeln("<h4>The Factorial numbers are<br></h4>");
+document.write("<table style='border:1px solid red;'>");
+for(var i=0;i<=n;i++)
+	document.write("<tr><td>"+i+"!</td><td>"+factorial(i)+"</td></tr>");
+
+document.write("</table>");
+
+
+document.writeln("<br><br><h4>The "+n+" fibonacci numbers are: </h4>");
+for(i=0;i<n;i++)
+{
+	f=fib(i);
+	document.writeln(f+" ");
+}
+
+
+function fib(n)
+{
+ if(n==1||n==0)
+  return 1;
+ else
+  return fib(n-1)+fib(n-2);
+}
+
+function factorial(n)
+{
+	if(n<=1)
+		return 1;
+	else
+		return n*factorial(n-1);
+}
+</script>
